@@ -1,0 +1,13 @@
+body {
+    border: 2px solid rgb(61, 48, 48);
+    margin: 1em auto;
+    padding: 1em;
+    max-width 50em; 
+  }
+.elvis {
+      color: red;
+      font-size: 2em;
+     }
+  h2 {
+      color: orange
+     }
