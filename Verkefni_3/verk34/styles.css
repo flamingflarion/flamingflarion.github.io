@@ -1,0 +1,69 @@
+*{
+    box-sizing: border-box;
+}
+body {
+    margin: 0 auto;
+    max-width: 60em; /* 1000px - 960px */
+    background-image: linear-gradient(to top, orangered, orange, orangered);
+    color: black;
+    font-family: 'Rokkitt', serif;
+}
+/* Grid Area hnit */
+.haus{
+    grid-area: haus;
+    text-align: center;
+}
+.container{
+    grid-area: container;
+}
+.topnav{
+    grid-area: topnav;
+}
+.foot{
+    grid-area: foot;
+}
+
+.as1 {
+    grid-area: as1;
+    padding-left: 1em;
+}
+.as2 {
+    grid-area: as2;
+    padding-left: 1em;
+}
+.art1 {
+    grid-area: art1;
+    padding-left: 1em;
+}
+/* Grid template area */
+.body{
+    display:grid;
+    grid-gap:1em;
+    grid-template-areas: 
+        "topnav"
+        "haus"
+        "container"
+        "foot"
+}
+/* innri tök í main */
+.main{
+    display:grid; 
+    grid-gap: 1em;
+    grid-template-areas:
+    "art1"
+    "as1"
+    "as2";
+    grid-template-columns: 1fr
+}
+/* flex box */
+.topmenu, .footmenu {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    margin:0;
+    padding:1em;
+    background-color: orange
+}
+.topmenu li, .footmenu li {
+    list-style-type: none;
+}

@@ -1,0 +1,73 @@
+*{
+    box-sizing: border-box;
+}
+body {
+    margin: 0 auto;
+    max-width: 60em; /* 1000px - 960px */
+    font-family: 'Roboto Slab', serif;
+    background-color: rgba(17, 16, 16, 0.842);
+    color: gainsboro;
+    background-image: linear-gradient(grey, black, black);
+    
+}
+/* Grid Area hnit */
+.haus{
+    grid-area: haus;
+    text-align: center
+}
+.container{
+    grid-area: container;
+}
+.topnav{
+    grid-area: topnav;
+}
+.foot{
+    grid-area: foot;
+}
+
+.as1 {
+    grid-area: as1;
+    border-right: 1px solid whitesmoke;
+    padding-right: 1em
+}
+.as2 {
+    grid-area: as2;
+    border-left : 1px solid whitesmoke;
+    padding-left: 1em
+}
+.art1 {
+    grid-area: art1;
+    border-top : 1px solid whitesmoke;
+    padding-top: 1em
+}
+/* Grid template area */
+.body{
+    display:grid;
+    grid-gap:1em;
+    grid-template-areas: 
+        "topnav"
+        "haus"
+        "container"
+        "foot"
+}
+/* innri tök í main */
+.main{
+    display:grid;
+    grid-gap: 1em;
+    grid-template-areas:
+        "as1 as2"
+        "art1 art1";
+    grid-template-columns: 1fr 2fr
+}
+/* flex box */
+.topmenu, .footmenu {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    margin:0;
+    padding:1em;
+    background-color: #ddd;
+}
+.topmenu li, .footmenu li {
+    list-style-type: none;
+}

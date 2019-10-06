@@ -1,0 +1,76 @@
+*{
+    box-sizing: border-box;
+}
+body {
+    margin: 0 auto;
+    max-width: 60em; /* 1000px - 960px */
+    background-image: repeating-linear-gradient(green, black);
+    color: orange;
+}
+/* Grid Area hnit */
+.haus{
+    grid-area: haus;
+    text-align: center;
+    color: orangered
+}
+.container{
+    grid-area: container;
+}
+.topnav{
+    grid-area: topnav;
+}
+.foot{
+    grid-area: foot;
+}
+
+.as1 {
+    grid-area: as1;
+    border-right: 1px solid black;
+    padding-right: 1em;
+    font-family: 'Fjalla One', sans-serif;
+}
+.as2 {
+    grid-area: as2;
+    border-left : 1px solid black;
+    padding-left: 1em;
+    font-family: 'Fjalla One', sans-serif;
+}
+.art1 {
+    grid-area: art1;
+}
+/* Grid template area */
+.body{
+    display:grid;
+    grid-gap:2em;
+    grid-template-areas: 
+        "topnav"
+        "container"
+        "haus"
+        "foot"
+}
+/* innri tök í main */
+.main{
+    display:grid;
+    grid-gap: 1em;
+    grid-template-areas:
+        "as1 art1 as2"
+        "haus haus haus";
+    grid-template-columns: 2fr 1fr 2fr;
+}
+/* flex box */
+.topmenu, .footmenu {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    margin:0;
+    padding:1em;
+}
+.footmenu{
+    background-color: black
+}
+.topmenu{
+    background-color: green
+}
+.topmenu li, .footmenu li {
+    list-style-type: none;
+}
