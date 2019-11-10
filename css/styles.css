@@ -114,3 +114,31 @@ blockquote{
 .gap-4 {
     grid-gap: 4em
 }
+.copy{
+    text-align: center;
+    color: white;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+flright{
+    float: right;
+}
+.gap-2 {
+    grid-gap: 2em
+}
+.mtop5em{
+    margin-top: 5em;
+}
+.flexend{
+    display: flex;
+    justify-content: flex-end;
+}
+audio{
+    width:10em;
+}
+.kort{
+    width: 100%;
+    height: 18.5;
+}
