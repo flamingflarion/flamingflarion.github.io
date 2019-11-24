@@ -27,6 +27,18 @@ grid-area: vinstri;
 .haegri {
 grid-area: haegri; 
 }
+.ball1{
+grid-area: ball1;
+}
+.ball2{
+grid-area: ball2;
+}
+.ball3{
+grid-area: ball3;
+}
+.ball4{
+grid-area: ball4;
+}
 
 /* ====== GRID Template Areas ===== */
 
@@ -48,6 +60,12 @@ grid-template-areas:
 "topmenu topmenu topmenu"
 "vinstri midja haegri"
 /* skipulag dálka kemur hér */
+}
+figure{
+  display: grid; 
+grid-gap: 0;
+grid-template-areas:
+"ball1 ball2 ball3 ball4"
 }
 
 /* ====== Base litir + padding ====== */
@@ -73,7 +91,6 @@ background: gold;
 .haegri {
 background: pink; 
 }
-
 header,
 footer,
 .midja,
@@ -143,6 +160,7 @@ color: black !important;
 background-color: lime;
 }
 
+
 /* =======================================
 *  myndvinnsla  *
 ======================================== */
@@ -209,14 +227,21 @@ Viðmið - breakpoints 37.5em = 600px +
     "main"
     "footer";
     grid-template-areas: 1fr 2fr;
-    }
+    } 
+  figure{
+    display: grid;
+    grid-gap: 0;
+    grid-template-areas:
+    "ball1 ball2" 
+    "ball3 ball4"
+  }
     
   main {
     display: grid; 
     grid-gap: 0;
     grid-template-areas:
     "haegri midja"
-    "vinstri midja"
+    "vinstri midja";
   }
   .topmenu{
     display: flex;
@@ -250,7 +275,12 @@ Viðmið - breakpoints 48em = 760px +
     "footer";
     
     }
-    
+    figure{
+      display: grid;
+      grid-gap: 0;
+      grid-template-areas:
+      "ball1 ball2 ball3 ball4"
+    }
   main {
     display: grid;
     max-width: 100%; 
@@ -284,7 +314,16 @@ Viðmið - breakpoints 80em = 1280px +
 ======================================== */
 
 @media screen and (min-width: 80em) { 
-  /* kóði sem yfirritar fyrri skipanir og nýjar skipanir sem eiga við 80em skjástærð */  
-  body { max-width: 80em;
+
+  /* kóði sem yfirritar fyrri skipanir og nýjar skipanir sem eiga við 60em skjástærð */  
+  main{ 
+    grid-template-areas:
+    "vinstri midja haegri";
+    grid-template-columns: 2fr 3fr 3fr;
   }
+  body{
+    max-width: 80;
+    margin: 0 auto;
+  }
+}
 }
